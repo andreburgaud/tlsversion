@@ -21,11 +21,11 @@ check-release:
     goreleaser check
 
 # Build a release and publish to GitHub
-release: clean
+release:
     goreleaser release --rm-dist
 
 # Local development build
-dev-build: clean
+dev-build:
     goreleaser build --rm-dist --single-target --snapshot
 
 # Push and tag changes to github
