@@ -5,6 +5,7 @@ VERSION := "0.1.0"
 alias cr := check-release
 alias db := dev-build
 alias rel := release
+alias lrel := local-release
 alias ghp := github-push
 
 # Default recipe (this list)
@@ -23,6 +24,10 @@ check-release:
 # Build a release and publish to GitHub
 release:
     goreleaser release --rm-dist
+
+# Build a local snapshot release
+local-release:
+    goreleaser release --rm-dist --snapshot
 
 # Local development build
 dev-build:
