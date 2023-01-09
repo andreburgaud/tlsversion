@@ -3,6 +3,8 @@
 `tlsversion` is a command line tools allowing to display the TLS versions supported by one or more hosts.
 It only supports TLS 1.0 through TLS 1.3.
 
+![image](https://github.com/andreburgaud/tlsversion/releases/download/0.2.0/Screenshot.from.2023-01-08.20-32-17.png)
+
 ## Usage
 
 ```bash
