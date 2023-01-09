@@ -16,7 +16,8 @@ import (
 )
 
 var (
-	Version = "1.0_dev"
+	// Version is set by goreleaser
+	Version = ""
 )
 
 const (

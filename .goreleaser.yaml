@@ -7,12 +7,18 @@ before:
     # you may remove this if you don't need go generate
     #- go generate ./...
 builds:
-  - env:
+  - main: ./cmd/tlsversion/
+    env:
       - CGO_ENABLED=0
     goos:
       - linux
       - windows
       - darwin
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      -s -w -X '{{ .ProjectName }}/internal/cli.Version={{ .Version }}'
 
 archives:
   - format: tar.gz
