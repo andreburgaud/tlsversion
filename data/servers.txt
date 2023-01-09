@@ -1,0 +1,13 @@
+burgaud.com
+google.com
+microsoft.com
+cloudflare.com
+# Server supporting only TLS1.0
+tls-v1-0.badssl.com:1010
+# Server supporting only TLS1.1
+tls-v1-1.badssl.com:1011
+# Server supporting only TLS1.2
+tls-v1-2.badssl.com:1012
+www.mozilla.org
+# The following host does not exist
+www.serverdoesnot.exist
