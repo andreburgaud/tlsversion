@@ -31,7 +31,7 @@ local-release:
 
 # Local development build
 dev-build:
-    goreleaser build --rm-dist --single-target --snapshot
+    goreleaser build --clean --single-target --snapshot
 
 # Push and tag changes to github
 github-push:
