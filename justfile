@@ -1,6 +1,6 @@
 #!/usr/bin/env just --justfile
 
-VERSION := "0.2.0"
+VERSION := "0.3.0"
 
 alias cr := check-release
 alias db := dev-build
@@ -14,7 +14,7 @@ default:
 
 # Update Go dependencies
 update:
-    go get -u
+    go get -u -d ./...
     go mod tidy -v
 
 # Check release configuration

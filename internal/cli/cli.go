@@ -13,6 +13,7 @@ import (
 
 	"github.com/fatih/color"
 	"github.com/rodaine/table"
+	"github.com/schollz/progressbar/v3"
 )
 
 var (
@@ -180,10 +181,14 @@ func (cmd Command) processHosts() {
 
 	var versions []*TlsSupport
 
+	bar := progressbar.Default(int64(len(cmd.hosts)))
 	for range cmd.hosts {
 		ts := <-ch
 		versions = append(versions, ts)
+		_ = bar.Add(1)
 	}
+
+	_, _ = fmt.Fprintln(os.Stderr)
 
 	headerFmt := color.New(color.FgHiGreen, color.Bold).SprintfFunc()
 	columnFmt := color.New(color.FgHiYellow, color.Bold).SprintfFunc()
